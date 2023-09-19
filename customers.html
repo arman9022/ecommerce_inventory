@@ -102,24 +102,24 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link ">
+        <a class="nav-link collapsed">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#Sales" data-bs-toggle="collapse" href="#">
+        <a class="nav-link " data-bs-target="#Sales" data-bs-toggle="collapse" href="#">
           <i class="bi bi-menu-button-wide"></i><span>Sales</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="Sales" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <ul id="Sales" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
           <li>
-            <a href="./orders.html">
+            <a>
               <i class="bi bi-circle"></i><span>Orders</span>
             </a>
           </li>
           <li>
-            <a href="./customers.html">
+            <a class="active">
               <i class="bi bi-circle"></i><span>Customers</span>
             </a>
           </li>
@@ -131,12 +131,12 @@
         </a>
         <ul id="Purchasing" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="./purchases.html">
+            <a>
               <i class="bi bi-circle"></i><span>Purchases</span>
             </a>
           </li>
           <li>
-            <a href="./suppliers.html">
+            <a>
               <i class="bi bi-circle"></i><span>Suppliers</span>
             </a>
           </li>
@@ -267,6 +267,96 @@
 
   <main id="main" class="main" style="min-height: 75vh;">
 
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <div class="card">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h5 class="card-title">Customers</h5>
+                </div>
+              </div>
+              
+              <div class="table-responsive">
+              <table class="table datatable table-responsive">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Mobile</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Address,</th>
+                    <th scope="col" class="text-center">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Emon</td>
+                    <td>016*****</td>
+                    <td>example@gmail.com</td>
+                    <td>
+                      ( Police Station, District, Division )
+                      Sahara centre ( Level 10), 37/A, VIP Road, Bijoynagar, Dhaka.
+                    </td>
+                    <td class="text-center">
+                      <a href="" data-bs-toggle="modal" data-bs-target="#Edit" class="btn btn-success px-1 py-0"><i class="bi bi-pencil-fill"></i></a>
+                      <a href="" data-bs-toggle="modal" data-bs-target="#Delete" class="btn btn-danger px-1 py-0"><i class="bi bi-trash3-fill"></i></a>
+                    </td>
+                  </tr>
+                  <!-- Edit -->
+                  <div class="modal fade" id="Edit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                          <div class="modal-header">
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <form action="" method="post">
+                          <div class="modal-body">
+                              <div class="row">
+                                  <div class="col-12">
+                                      <label for="">Name :</label>
+                                      <input type="text" name="" class="form-control mt-2 mb-3">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              <a class="btn btn-success">Update</a>
+                          </div>
+                          </form>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Delete -->
+                  <div class="modal fade" id="Delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <h3 class="text-center text-danger">Are you sure ?</h3>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <a class="btn btn-danger">Delete</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </tbody>
+              </table>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
   </main>
 

@@ -102,24 +102,24 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link ">
+        <a class="nav-link collapsed">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#Sales" data-bs-toggle="collapse" href="#">
+        <a class="nav-link " data-bs-target="#Sales" data-bs-toggle="collapse" href="#">
           <i class="bi bi-menu-button-wide"></i><span>Sales</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="Sales" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <ul id="Sales" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
           <li>
-            <a href="./orders.html">
+            <a class="active">
               <i class="bi bi-circle"></i><span>Orders</span>
             </a>
           </li>
           <li>
-            <a href="./customers.html">
+            <a>
               <i class="bi bi-circle"></i><span>Customers</span>
             </a>
           </li>
@@ -131,12 +131,12 @@
         </a>
         <ul id="Purchasing" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="./purchases.html">
+            <a>
               <i class="bi bi-circle"></i><span>Purchases</span>
             </a>
           </li>
           <li>
-            <a href="./suppliers.html">
+            <a>
               <i class="bi bi-circle"></i><span>Suppliers</span>
             </a>
           </li>
@@ -267,7 +267,190 @@
 
   <main id="main" class="main" style="min-height: 75vh;">
 
+      <!-- Add -->
+      <div class="modal fade" id="Add" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="badge text-bg-success m-2">Total : 1500</span>
+              <span class="badge text-bg-primary m-2">Paid : 500</span>
+              <span class="badge text-bg-danger m-2">Due : 1000</span>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-12">
+                  <label for="">Amount :</label>
+                  <input type="text" name="" id="" class="form-control mt-2 mb-3">
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <a class="btn btn-success">Create</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
+    <section class="section">
+        <div class="row">
+          <div class="col-12 pb-3">
+            <a href="" class="btn btn-primary mb-1">All</a>
+            <a href="" class="btn btn-outline-primary mb-1">Today</a>
+            <a href="" class="btn btn-outline-primary mb-1">Yesterday</a>
+            <a href="" class="btn btn-outline-primary mb-1">Partially Paid</a>
+            <a href="" class="btn btn-outline-primary mb-1">Fully Paid</a>
+            <a href="" class="btn btn-outline-primary mb-1">Delivery Pending</a>
+            <a href="" class="btn btn-outline-primary mb-1">Delivered</a>
+            <a href="" class="btn btn-outline-primary mb-1">Canceled</a>
+          </div>
+          <div class="col-lg-12">
+  
+            <div class="card">
+              <div class="card-body">
+                
+                <div class="table-responsive">
+                <table class="table datatable table-responsive">
+                  <thead>
+                    <tr>
+                      <th scope="col">Ordered_Date</th>
+                      <th scope="col">Invoice Id</th>
+                      <th scope="col">Customer_Info</th>
+                      <th scope="col">Customer_Address</th>
+                      <th scope="col">Total Amount</th>
+                      <th scope="col">Paid Amount</th>
+                      <th scope="col">Status</th>
+                      <th scope="col" class="text-center">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2023-09-17</td>
+                      <td>140023</td>
+                      <td>
+                        <span style="font-size: 12px;">
+                            Ashiqur Rahman <br>
+                            01632109022
+                        </span>
+                      </td>
+                      <td>
+                        <span style="font-size: 12px;">
+                            Sahara centre ( Level 10), 37/A, VIP Road, Bijoynagar, Dhaka.
+                        </span>
+                      </td>
+                      <td>1500</td>
+                      <td>
+                        500 &nbsp;&nbsp;
+                        <a href="" data-bs-toggle="modal" data-bs-target="#Add" class="btn btn-outline-dark py-0 px-1 rounded-circle">
+                          <i class="bi bi-plus"></i>
+                        </a>
+                      </td>
+                      <td>
+                        <span class="badge text-bg-warning">Partially Paid</span>
+                      </td>
+                      <td class="text-center">
+                        <!-- <a href="" data-bs-toggle="modal" data-bs-target="#Show" class="btn btn-primary px-1 py-0"><i class="bi bi-eye-fill"></i></a> <br> -->
+                        <!-- <a href="" data-bs-toggle="modal" data-bs-target="#Edit" class="btn btn-success px-1 py-0"><i class="bi bi-pencil-fill"></i></a> <br> -->
+                        <a href="" data-bs-toggle="modal" data-bs-target="#Delete" class="btn btn-danger px-1 py-0"><i class="bi bi-trash3-fill"></i></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2023-09-17</td>
+                      <td>140023</td>
+                      <td>
+                        <span style="font-size: 12px;">
+                            Ashiqur Rahman <br>
+                            01632109022
+                        </span>
+                      </td>
+                      <td>
+                        <span style="font-size: 12px;">
+                            Sahara centre ( Level 10), 37/A, VIP Road, Bijoynagar, Dhaka.
+                        </span>
+                      </td>
+                      <td>1500</td>
+                      <td>
+                        500 &nbsp;&nbsp;
+                        <a href="" data-bs-toggle="modal" data-bs-target="#Add" class="btn btn-outline-dark py-0 px-1 rounded-circle">
+                          <i class="bi bi-plus"></i>
+                        </a>
+                      </td>
+                      <td>
+                        <a href="" data-bs-toggle="modal" data-bs-target="#Complete">
+                        <span class="badge text-bg-info">Delivery Pending</span>
+                        </a>
+                      </td>
+                      <td class="text-center">
+                        <!-- <a href="" data-bs-toggle="modal" data-bs-target="#Show" class="btn btn-primary px-1 py-0"><i class="bi bi-eye-fill"></i></a> <br> -->
+                        <!-- <a href="" data-bs-toggle="modal" data-bs-target="#Edit" class="btn btn-success px-1 py-0"><i class="bi bi-pencil-fill"></i></a> <br> -->
+                        <a href="" data-bs-toggle="modal" data-bs-target="#Delete" class="btn btn-danger px-1 py-0"><i class="bi bi-trash3-fill"></i></a>
+                      </td>
+                    </tr>
+                    <!-- Show -->
+                    <div class="modal fade" id="Show" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h4>Product Name : Mini Table Regular - black</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Delete -->
+                    <div class="modal fade" id="Delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <h3 class="text-center text-danger">Are you sure ?</h3>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <a class="btn btn-danger">Delete</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Complete -->
+                    <div class="modal fade" id="Complete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h3>Order Done</h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <h3 class="text-center text-success">Are you sure ?</h3>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <a class="btn btn-success">Yes</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </tbody>
+                </table>
+                </div>
+  
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </section>
+  
   </main>
 
   <!-- <footer id="footer" class="footer">
